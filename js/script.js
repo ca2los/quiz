@@ -51,7 +51,7 @@
             let answer_01 = document.getElementById('answer_01').value.toUpperCase();
             if (answer_01 === "STATEMENTS" || answer_01 === "STATEMENT") {
                 part_01.style.display = 'none';
-                console.log('CORRECT: ' + ' + BONUS ' + time_penalize + " seconds");
+                console.log('CORRECT ');
                 points();
                 retrieve_quiz_02();
                 event.preventDefault();
@@ -80,7 +80,7 @@
 
         submit.addEventListener("click", function(event){
             part_02.style.display = 'none';
-            console.log('CORRECT: ' + ' + BONUS ' + time_penalize + " seconds");
+            console.log('CORRECT ');
             points();
             retrieve_quiz_03();
             event.preventDefault();
@@ -119,7 +119,7 @@
             let answer_03 = document.getElementById('answer_03').value.toUpperCase();
             if (answer_03 === "SWITCH") {
                 part_03.style.display = 'none';
-                console.log('CORRECT: ' + ' + BONUS ' + time_penalize + " seconds");
+                console.log('CORRECT ');
                 points();
                 retrieve_quiz_04();
                 event.preventDefault();
@@ -147,7 +147,7 @@
 
         submit.addEventListener("click", function(event){
             part_04.style.display = 'none';
-            console.log('CORRECT: ' + ' + BONUS ' + time_penalize + " seconds");
+            console.log('CORRECT ');
             points();
             retrieve_quiz_05();
             event.preventDefault();
@@ -186,7 +186,7 @@
             let answer_05 = document.getElementById('answer_05').value.toUpperCase();
             if (answer_05 === "BOOLEAN") {
                 part_05.style.display = 'none';
-                console.log('CORRECT: ' + ' + BONUS ' + time_penalize + " seconds");
+                console.log('CORRECT ');
                 points();
                 retrieve_quiz_06();
                 event.preventDefault();
@@ -214,7 +214,7 @@
 
         submit.addEventListener("click", function(event){
             part_06.style.display = 'none';
-            console.log('CORRECT: ' + ' + BONUS ' + time_penalize + " seconds");
+            console.log('CORRECT ');
             points();
             retrieve_quiz_07();
             event.preventDefault();
@@ -255,7 +255,7 @@
 
         submit.addEventListener("click", function(event){
             part_07.style.display = 'none';
-            console.log('CORRECT: ' + ' + BONUS ' + time_penalize + " seconds");
+            console.log('CORRECT ');
             points();
             retrieve_quiz_08();
             event.preventDefault();
@@ -296,7 +296,7 @@
 
         submit.addEventListener("click", function(event){
             part_08.style.display = 'none';
-            console.log('CORRECT: ' + ' + BONUS ' + time_penalize + " seconds");
+            console.log('CORRECT ');
             points();
             retrieve_quiz_09();
             event.preventDefault();
@@ -337,7 +337,7 @@
 
         submit.addEventListener("click", function(event){
             part_09.style.display = 'none';
-            console.log('CORRECT: ' + ' + BONUS ' + time_penalize + " seconds");
+            console.log('CORRECT ');
             points();
             retrieve_quiz_10();
             event.preventDefault();
@@ -378,7 +378,7 @@
 
         submit.addEventListener("click", function(event){
             part_10.style.display = 'none';
-            console.log('CORRECT: ' + ' + BONUS ' + time_penalize + " seconds");
+            console.log('CORRECT ');
             points();
             stats();
             event.preventDefault();

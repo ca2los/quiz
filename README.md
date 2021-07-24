@@ -1,36 +1,33 @@
+# Quiz
+### By Carlos Aguirre Oseguera
+#### Sessions: July 12 / July 18
 
-// 02. WHEN user enters his name, THEN validation starts
-let input_name = document.getElementById('input_name_id').value;            // NAME value from the input
-function retrieve_name() {                                                            // N
-    let input_msg = document.children[2].children[0].children[3];
-    if (input_name == null) {
-        input_msg.textContent = 'You must type your aka or name.';
-        console.log('NO DATA');
-    }
-    else if (!/^[a-zA-Z]+$/.test(input_name)) {
-        input_msg.textContent = 'You cannot enter numbers or symbols.';
-        console.log('NO DATA');
-    }
-    else {
-        console.log('NAME: ' + input_name);                                               // NAME is valid then
-        document.getElementById('question_01').style.display = 'none';     // ID style is display block and
-        quiz_init();                                                                 // Initialize the questions
-    }
-}
+## A Javascript questionnaire
+[TRY IT HERE!](https://ca2los.github.io/quiz/)
+*v.1.0*
 
-let q01 = document.getElementById('input_question_01');
+The user will be able to interact with a questionnaire by typing his/her name, typing values, selecting values, obtain
+points when the answers are correct, and be penalized when incorrect. The timing counter will define the time available
+to complete all the questions.
 
+    * Type a USER name (all characters are allowed)
+    * Type your answer (validated by words)  
+    * Select your answer (validated by element selected)
+    * Obtain a score (Points added by 10 when answers are correct)
+    * Penalize with time (Substract 10 seconds with every incorrect answer)
+    * Timing (240 SECONDS) until game is over
+    * Statistics at the end (Points obtained)
+    * Reload Page (When game is over)
 
+### YOU WILL FIND:
+This project is intended to demonstrate the possibilities of JavaScript. [Take
+a look at the script.js](https://github.com/ca2los/quiz/blob/main/js/script.js), and you will find the highlights of the program.
 
-// 01. WHEN button is clicked, THEN the quiz starts
-function start_button() {
-    let btn_init = document.getElementById('btn_init_id');
-    btn_init.addEventListener('click',function(){
-        retrieve_name();
-    });
-}
-start_button();
+- [x] Functions
+- [x] If Statements
+- [x] Event Prevent Default
+- [x] Reload
+- [x] Inputs
+- [x] Validations
 
-// ENTER user's name and validate to run the program
-// THEN quiz starts
-// WHEN user enters an incorrect data, the warning message appears
+###### July 24, 2021.
