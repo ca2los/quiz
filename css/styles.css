@@ -1,0 +1,519 @@
+body {
+  background: #1c0d66;
+  margin: 0 auto;
+}
+body header {
+  width: 96%;
+  height: 50px;
+  background: #161c21;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 2% 0;
+  position: fixed;
+  z-index: 1;
+}
+body header ul {
+  align-items: center;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+body header ul li {
+  display: inline-block;
+  margin: 0 6px 0 0;
+}
+body header ul li p {
+  color: #ffffff;
+  font-family: "Roboto Mono", serif;
+  font-size: 18px;
+  margin: 0;
+}
+body header ul li p a {
+  color: #ffffff;
+  text-decoration: none;
+}
+body header ul li button {
+  color: #435661;
+  cursor: pointer;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  margin: 3px 0 0;
+  padding: 4px 6px;
+  text-transform: uppercase;
+}
+body header ul li img {
+  width: 34px;
+}
+body main {
+  width: 90%;
+  min-height: 100vh;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0 5%;
+  text-align: center;
+}
+body main #name {
+  width: 100%;
+  color: #4865ff;
+  font-family: 'monospace', sans-serif;
+  font-size: 2em;
+}
+body main #timer {
+  display: none;
+  background: #dc1e1e;
+  border-radius: 5px 0 0 5px;
+  color: #fff;
+  font-family: 'monospace', sans-serif;
+  font-size: 2em;
+  padding: 20px 20px 14px;
+  position: fixed;
+  top: 140px;
+  right: 0;
+  z-index: 1;
+}
+body main #points {
+  width: 100%;
+  color: #75d780;
+  margin: 10px auto;
+  font-size: 1.2em;
+}
+body main section {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 980px;
+  margin: 0 auto;
+}
+body main section h1 {
+  width: 100%;
+  color: #fff;
+  font-size: 2.5em;
+  display: inline-block;
+  text-align: center;
+  margin: 0 auto 18px;
+}
+body main section h4 {
+  width: 100%;
+  color: #fff;
+  display: inline-block;
+  font-size: 0.9em;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin: 0 auto 12px;
+  text-align: center;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+body main section p {
+  width: 100%;
+  color: #787297;
+  display: inline-block;
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin: 0 auto 20px;
+  text-align: center;
+}
+body main section p strong {
+  color: #fff;
+}
+body main section p a {
+  color: #4865ff;
+}
+body main section p a:hover {
+  color: #fff;
+}
+body main section button {
+  width: 200px;
+  height: 50px;
+  background: #e1daff;
+  border: 0;
+  border-radius: 6px;
+  color: #362394;
+  cursor: pointer;
+  font-family: 'monospace', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 20px auto 40px;
+  padding: 4px 0 0;
+  text-transform: uppercase;
+}
+body main section button:hover {
+  background: #fff;
+}
+body main section label {
+  color: #787297;
+  display: inline;
+  font-size: 3em;
+  line-height: 1.6;
+}
+body main section input {
+  width: 100%;
+  background: none;
+  border: 0;
+  border-bottom: 1px solid #4865ff;
+  color: #fff;
+  display: inline;
+  font-size: 5em;
+  margin: 10px 0 4px;
+  text-align: center;
+  text-transform: uppercase;
+}
+body main section input[data-submit] {
+  background: #fff;
+  border-radius: 5px;
+  color: #362394;
+  cursor: pointer;
+  font-size: 2em;
+  font-weight: 700;
+  margin: 40px 0 0;
+  padding: 10px 30px;
+}
+body main section#step_02,
+body main section#step_03,
+body main section#part_01,
+body main section#part_02,
+body main section#part_03,
+body main section#part_04,
+body main section#part_05,
+body main section#part_06,
+body main section#part_07,
+body main section#part_08,
+body main section#part_09,
+body main section#part_10 {
+  display: none;
+}
+body main section#step_03,
+body main section#part_01,
+body main section#part_02,
+body main section#part_03,
+body main section#part_04,
+body main section#part_05,
+body main section#part_06,
+body main section#part_07,
+body main section#part_08,
+body main section#part_09,
+body main section#part_10 {
+  display: none;
+}
+body main section#step_03 h1,
+body main section#part_01 h1,
+body main section#part_02 h1,
+body main section#part_03 h1,
+body main section#part_04 h1,
+body main section#part_05 h1,
+body main section#part_06 h1,
+body main section#part_07 h1,
+body main section#part_08 h1,
+body main section#part_09 h1,
+body main section#part_10 h1 {
+  text-align: left;
+}
+body main section#step_03 form,
+body main section#part_01 form,
+body main section#part_02 form,
+body main section#part_03 form,
+body main section#part_04 form,
+body main section#part_05 form,
+body main section#part_06 form,
+body main section#part_07 form,
+body main section#part_08 form,
+body main section#part_09 form,
+body main section#part_10 form {
+  text-align: left;
+}
+body main section#step_03 label,
+body main section#part_01 label,
+body main section#part_02 label,
+body main section#part_03 label,
+body main section#part_04 label,
+body main section#part_05 label,
+body main section#part_06 label,
+body main section#part_07 label,
+body main section#part_08 label,
+body main section#part_09 label,
+body main section#part_10 label {
+  font-size: 2em;
+  line-height: 1.4;
+}
+body main section#step_03 input,
+body main section#part_01 input,
+body main section#part_02 input,
+body main section#part_03 input,
+body main section#part_04 input,
+body main section#part_05 input,
+body main section#part_06 input,
+body main section#part_07 input,
+body main section#part_08 input,
+body main section#part_09 input,
+body main section#part_10 input {
+  width: auto;
+  font-size: 2em;
+  line-height: 1.4;
+  text-align: center;
+}
+body main section#step_03 input::placeholder,
+body main section#part_01 input::placeholder,
+body main section#part_02 input::placeholder,
+body main section#part_03 input::placeholder,
+body main section#part_04 input::placeholder,
+body main section#part_05 input::placeholder,
+body main section#part_06 input::placeholder,
+body main section#part_07 input::placeholder,
+body main section#part_08 input::placeholder,
+body main section#part_09 input::placeholder,
+body main section#part_10 input::placeholder {
+  color: #4865ff;
+}
+body main section#step_03 input[data-submit],
+body main section#part_01 input[data-submit],
+body main section#part_02 input[data-submit],
+body main section#part_03 input[data-submit],
+body main section#part_04 input[data-submit],
+body main section#part_05 input[data-submit],
+body main section#part_06 input[data-submit],
+body main section#part_07 input[data-submit],
+body main section#part_08 input[data-submit],
+body main section#part_09 input[data-submit],
+body main section#part_10 input[data-submit] {
+  width: 100%;
+  background: #fff;
+  border-radius: 5px;
+  color: #362394;
+  cursor: pointer;
+  display: block;
+  font-size: 2em;
+  font-weight: 700;
+  margin: 30px auto 50px;
+  padding: 10px 30px;
+}
+body main section#step_03 button,
+body main section#part_01 button,
+body main section#part_02 button,
+body main section#part_03 button,
+body main section#part_04 button,
+body main section#part_05 button,
+body main section#part_06 button,
+body main section#part_07 button,
+body main section#part_08 button,
+body main section#part_09 button,
+body main section#part_10 button {
+  width: auto;
+  margin: 20px auto 20px;
+  padding: 4px 17px 0;
+}
+body main section#step_03 h2,
+body main section#part_01 h2,
+body main section#part_02 h2,
+body main section#part_03 h2,
+body main section#part_04 h2,
+body main section#part_05 h2,
+body main section#part_06 h2,
+body main section#part_07 h2,
+body main section#part_08 h2,
+body main section#part_09 h2,
+body main section#part_10 h2 {
+  width: 90%;
+  border-top: 1px dashed #fff;
+  color: #fff;
+  display: block;
+  font-size: 1.5em;
+  text-align: left;
+  margin: 0 auto 18px;
+  padding: 40px 0 0;
+}
+body main section#step_03 p,
+body main section#part_01 p,
+body main section#part_02 p,
+body main section#part_03 p,
+body main section#part_04 p,
+body main section#part_05 p,
+body main section#part_06 p,
+body main section#part_07 p,
+body main section#part_08 p,
+body main section#part_09 p,
+body main section#part_10 p {
+  width: 90%;
+  display: block;
+  text-align: left;
+}
+body main section#step_03 p.full,
+body main section#part_01 p.full,
+body main section#part_02 p.full,
+body main section#part_03 p.full,
+body main section#part_04 p.full,
+body main section#part_05 p.full,
+body main section#part_06 p.full,
+body main section#part_07 p.full,
+body main section#part_08 p.full,
+body main section#part_09 p.full,
+body main section#part_10 p.full {
+  width: 100%;
+}
+body main section#step_03 h4,
+body main section#part_01 h4,
+body main section#part_02 h4,
+body main section#part_03 h4,
+body main section#part_04 h4,
+body main section#part_05 h4,
+body main section#part_06 h4,
+body main section#part_07 h4,
+body main section#part_08 h4,
+body main section#part_09 h4,
+body main section#part_10 h4 {
+  width: 90%;
+  color: #4865ff;
+  display: block;
+  text-align: left;
+}
+body main section#step_03 code,
+body main section#part_01 code,
+body main section#part_02 code,
+body main section#part_03 code,
+body main section#part_04 code,
+body main section#part_05 code,
+body main section#part_06 code,
+body main section#part_07 code,
+body main section#part_08 code,
+body main section#part_09 code,
+body main section#part_10 code {
+  width: 84%;
+  background: #4b26ff;
+  color: #fff;
+  display: block;
+  font-size: 2em;
+  margin: 50px auto 0;
+  padding: 3%;
+  border-radius: 5px;
+  text-align: center;
+}
+body main section#step_03 code.mini,
+body main section#part_01 code.mini,
+body main section#part_02 code.mini,
+body main section#part_03 code.mini,
+body main section#part_04 code.mini,
+body main section#part_05 code.mini,
+body main section#part_06 code.mini,
+body main section#part_07 code.mini,
+body main section#part_08 code.mini,
+body main section#part_09 code.mini,
+body main section#part_10 code.mini {
+  width: auto;
+  font-size: 1.2em;
+  margin: 0 6px;
+  padding: 6px 12px;
+  display: initial;
+}
+body main button,
+body main img {
+  -webkit-box-shadow: 0 14px 12px -14px #080311;
+  -moz-box-shadow: 0 14px 12px -14px #080311;
+  box-shadow: 0 14px 12px -14px #080311;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+body main button:hover,
+body main img:hover {
+  -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0);
+  -moz-box-shadow: 0 0 0 0 rgba(0, 0, 0);
+  box-shadow: 0 0 0 0 rgba(0, 0, 0);
+}
+body footer {
+  max-width: none;
+  background: #080311;
+  padding: 60px 0;
+}
+body footer .container {
+  max-width: 440px;
+  background: #161d21;
+  border: 1px solid #312f35;
+  border-radius: 10px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0 0 26px;
+}
+body footer .container .columns {
+  flex: 1;
+}
+body footer .container .columns:nth-child(1) {
+  flex: 1.5;
+}
+body footer .container .columns:nth-child(2) {
+  flex: 2;
+}
+body footer .container .columns img {
+  width: 100%;
+  max-width: 110px;
+  border-radius: 200px;
+  display: block;
+  margin: 20px auto 0;
+}
+body footer .container .columns h1 {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-size: 1.5rem;
+  margin: 20px 0 0;
+}
+body footer .container .columns h1 a {
+  color: #fff;
+  text-decoration: none;
+}
+body footer .container .columns button {
+  color: #435661;
+  cursor: pointer;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  margin: 12px 0 0;
+  text-transform: uppercase;
+}
+body footer .container .columns p {
+  font-family: "Roboto Mono", serif;
+  font-size: 0.8rem;
+  margin: 10px 0 0;
+}
+body a,
+body .box,
+body ::after {
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6,
+body p,
+body section,
+body div,
+body a,
+body ul,
+body ol,
+body li,
+body input,
+body label {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+@media screen and (max-width: 769px) {
+  body main {
+    justify-content: normal;
+    padding: 90px 5% 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  body footer .container {
+    width: 80%;
+    max-width: none;
+  }
+  body footer .container .columns img {
+    max-width: 90px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

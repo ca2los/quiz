@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="theme-color" content="#291D90" >
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Quiz: The Lost Levels</title>
+        <link rel="icon" type="image/png" href="./img/favicon.png">
+        <link rel="stylesheet" href="./css/styles.min.css">
+    </head>
+
+    <body>
+        <header>
+            <section>
+                <ul>
+                    <li>
+                        <a href="https://github.com/ca2los">
+                            <img src="./img/github_icon_black.png" alt="GitHub Logo"/>
+                        </a>
+                    </li>
+                    <li>
+                        <p>
+                            <a href="https://github.com/ca2los">/ca2los</a>
+                        </p>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <ul>
+                    <li>
+                        <button type="reset" onclick="location.href='https://github.com/ca2los/flexbox'">GitHub Repository</button>
+                    </li>
+                </ul>
+            </section>
+        </header>
+
+        <main>
+
+            <!-- Press Start -->
+            <section id="step_01">
+                <h1>You think you know Javascript?</h1>
+                <p>If you have the skills to master the language, then take the challenge and see by yourself.</p>
+                <button id="btn_init_id" type="button">Start</button>
+                <h4>Attention</h4>
+                <p>The content in the questionnaire is a semblance of the chapters inside the book series <strong>"You Don't Know Javascript"</strong> by <a href="https://github.com/getify" target="_blank">Kyle Simpson</a>. I strongly recommend you to take a look at his books and <a href="https://github.com/getify/You-Dont-Know-JS" target="_blank">support his project</a> or visit his <a href="https://frontendmasters.com/kyle-simpson/" target="_blank">workshops</a> video training courses.</p>
+            </section>
+
+            <!-- Enter Name -->
+            <section id="step_02">
+                <form>
+                    <label for="input_name_id">Enter your name</label>
+                    <input type="text" id="input_name_id" name="input_name_id" placeholder="In Here">
+                    <input type="submit" id="btn_quiz_start" value="Submit" data-submit>
+                </form>
+            </section>
+
+            <section id="timer"></section>
+            <section id="name"></section>
+            <section id="points"></section>
+
+            <!-- Question #1 -->
+            <section id="part_01">
+                <h1>01. Back to the basics</h1>
+                <form>
+                    <label for="answer_01">In a computer language the</label>
+                    <input type="text" id="answer_01" name="user_answer" placeholder="answer">
+                    <label for="input_name_id">are a group of words, numbers and operators that performs a specific task.</label>
+                    <input type="submit" id="btn_submit_01" value="Submit" data-submit>
+                </form>
+                <h2>Let me give you a hint...</h2>
+                <p>Programs are just collections of many such statements, which together describe all the steps that it takes to perform your program's purpose.</p>
+                <h4>In Javascript it might looks as follows:</h4>
+                <code>
+                    a = b * 2
+                </code>
+            </section>
+
+            <!-- Question #2 -->
+            <section id="part_02">
+                <h1>02. Variables</h1>
+                <p class="full">Javascript allows a variable to hold any type of value at any time. How can you call that?</p>
+                <button id="btn_submit_02_a" type="button">Type Enforcement</button>
+                <button id="btn_submit_02_b" type="button">Type Information</button>
+                <button id="btn_submit_02_c" type="button">Strict Typing</button>
+                <button id="btn_submit_02_d" type="button">Dynamic Typing</button>
+                <h2>Let me give you a hint...</h2>
+                <p>Variables in Javascript can hold values of <em>any type</em> without <em>any type of enforcement</em>.</p>
+                <h4>Consider this simple program:</h4>
+                <code>
+                    var amount = 99.99;
+                    amount = amount * 2;
+                    console.log('amount'); // 199.98
+                </code>
+            </section>
+
+            <!-- Question #3 -->
+            <section id="part_03">
+                <h1>03. Conditionals</h1>
+                <p class="full">In Javascript, <em>Conditionals</em> exist in other forms besides the if statement.</p>
+                <form>
+                    <label for="answer_03">For example, the </label>
+                    <input type="text" id="answer_03" name="user_answer" placeholder="Your answer...">
+                    <label for="input_name_id">statement can be used as a shorthand for a series of "if...else" statements.</label>
+                    <input type="submit" id="btn_submit_03" value="Submit" data-submit>
+                </form>
+                <h2>Let me give you a hint...</h2>
+                <p>statement first evaluates its expression. It then looks for the first case clause whose expression evaluates to the same value as the result of the input expression (using the strict comparison, <code class="mini">===</code>) and transfers control to that clause, executing the associated statements.</p>
+                <h4>This is an example of a single operation:</h4>
+                <code>
+                    switch (expr) {
+                    case 'Oranges':
+                    console.log('Lb $0.59.');
+                    break;
+                    case 'Apples':
+                    console.log('Lb $0.32.');
+                    break;
+                    default:
+                    console.log(expr);
+                    }
+                </code>
+            </section>
+
+            <!-- Question #4 -->
+            <section id="part_04">
+                <h1>04. Values & Types - A</h1>
+                <p class="full">What result returns the typeof operator when examines the value of <code class="mini">a = null;</code>?</p>
+                <button id="btn_submit_04_a" type="button">String</button>
+                <button id="btn_submit_04_b" type="button">Object</button>
+                <button id="btn_submit_04_c" type="button">Undefined</button>
+                <button id="btn_submit_04_d" type="button">Null</button>
+                <h2>Let me give you a hint...</h2>
+                <p>JavaScript provides a typeof operator that can examine a value and tell you what type it is.</p>
+                <h4>Consider this simple program:</h4>
+                <code>
+                    var a;
+                    typeof a;				// "undefined"
+
+                    a = "hello world";
+                    typeof a;				// "string"
+
+                    a = 42;
+                    typeof a;				// "number"
+
+                    a = true;
+                    typeof a;				// "boolean"
+                </code>
+            </section>
+
+            <!-- Question #5 -->
+            <section id="part_05">
+                <h1>05. Comparing values</h1>
+                <p class="full">There are two main types of value comparison that you will need to make in your JS programs:</p>
+                <form>
+                    <label for="answer_05">Equality and inequality. The result of any comparison is a strictly </label>
+                    <input type="text" id="answer_05" name="user_answer" placeholder="Your answer...">
+                    <label for="input_name_id"> value (true or false), regardless of what value types are compared.</label>
+                    <input type="submit" id="btn_submit_05" value="Submit" data-submit>
+                </form>
+                <h2>Let me give you a hint...</h2>
+                <p>A non-boolean value only follows this <code class="mini">"truthy"/"falsy"</code> coercion if it's actually coerced to a boolean.</p>
+                <h4>This is an example of a single operation:</h4>
+                <code>
+                    var a = "42";
+                    var b = 42;
+                    a == b;			// true
+                    a === b;		// false
+                </code>
+            </section>
+
+            <!-- Question #6 -->
+            <section id="part_06">
+                <h1>06. Values & Types - B</h1>
+                <p class="full">It's the reference of a <code class="mini">compound value</code> where you can set properties (named locations) that each hold their own values of any type.</p>
+                <button id="btn_submit_06_a" type="button">Explicit Coercion</button>
+                <button id="btn_submit_06_b" type="button">Nested Scopes</button>
+                <button id="btn_submit_06_c" type="button">Object</button>
+                <button id="btn_submit_06_d" type="button">Coercion</button>
+                <h2>You may need this...</h2>
+                <p>Properties can either be accessed with dot notation (i.e., obj.a) or bracket notation (i.e., obj["a"]). Dot notation is shorter and generally easier to read, and is thus preferred when possible.</p>
+                <h4>Consider this simple program:</h4>
+                <code>
+                    obj.a;
+                    obj.b;
+                    obj.c;
+                </code>
+            </section>
+
+            <!-- Question #7 -->
+            <section id="part_07">
+                <h1>07. Built-In Type Methods</h1>
+                <p class="full">The built-in types and subtypes have behaviors exposed as properties and methods that are quite powerful and useful. What's the result generated by the length method in the example ?</p>
+                <code>
+                    var a = "hello world";
+                    a.length;
+                </code>
+                <button id="btn_submit_07_a" type="button">11</button>
+                <button id="btn_submit_07_b" type="button">'10'</button>
+                <button id="btn_submit_07_c" type="button">10</button>
+                <button id="btn_submit_07_d" type="button">'11'</button>
+                <h2>Nah! You don't need hints.</h2>
+            </section>
+
+            <!-- Question #8 -->
+            <section id="part_08">
+                <h1>08. Coercion - A</h1>
+                <p class="full">If the Implicit Coercion is when the type conversion can happen as more of a non-obvious side effect of some other operation. What type of coercion is in the example code?</p>
+                <code>
+                    var a = "42";
+                    var b = Number( a );
+                    a;				// "42"
+                    b;				// 42 -- the number!
+                </code>
+                <button id="btn_submit_08_a" type="button">Truthy</button>
+                <button id="btn_submit_08_b" type="button">Explicit Coercion</button>
+                <button id="btn_submit_08_c" type="button">Falsy</button>
+                <button id="btn_submit_08_d" type="button">Implicit Coercion</button>
+                <h2>Nah! You don't need hints.</h2>
+            </section>
+
+            <!-- Question #9 -->
+            <section id="part_09">
+                <h1>09. Coercion - A</h1>
+                <p class="full">If the Explicit Coercion is simply that you can see obviously from the code that a conversion from one type to another will occur. What type of coercion is in the example code?</p>
+                <code>
+                    var a = "42";
+                    var b = a * 1;
+                    a;				// "42"
+                    b;				// 42
+                </code>
+                <button id="btn_submit_09_a" type="button">Truthy</button>
+                <button id="btn_submit_09_b" type="button">Explicit Coercion</button>
+                <button id="btn_submit_09_c" type="button">Falsy</button>
+                <button id="btn_submit_09_d" type="button">Implicit Coercion</button>
+                <h2>Nah! You don't need hints.</h2>
+            </section>
+
+            <!-- Question #10 -->
+            <section id="part_10">
+                <h1>The Creator</h1>
+                <p class="full">Who created the JS language?</p>
+                <button id="btn_submit_10_a" type="button">Brendan Eich</button>
+                <button id="btn_submit_10_b" type="button">Julian Assange</button>
+                <button id="btn_submit_10_c" type="button">Aliens</button>
+                <button id="btn_submit_10_d" type="button">Heinrich Boll</button>
+                <h2>Nah! You don't need hints.</h2>
+            </section>
+
+            <!-- Points -->
+            <section id="step_03">
+                <h1>Total achieved</h1>
+                <button id="btn_restart_id" type="button">Try Again?</button>
+                <h4>Attention</h4>
+                <p>The content in the questionnaire is a semblance of the chapters inside the book series <strong>"You Don't Know Javascript"</strong> by <a href="https://github.com/getify" target="_blank">Kyle Simpson</a>. I strongly recommend you to take a look at his books and <a href="https://github.com/getify/You-Dont-Know-JS" target="_blank">support his project</a> or visit his <a href="https://frontendmasters.com/kyle-simpson/" target="_blank">workshops</a> video training courses.</p>
+            </section>
+
+        </main>
+
+        <footer>
+            <section class="container">
+                <section class="columns">
+                    <img src="./img/avatar.jpg" alt="Profile photo">
+                </section>
+                <section class="columns">
+                    <h1><a href="https://github.com/ca2los" target="_blank">ca2los</a></h1>
+                    <button type="reset" onclick="location.href='https://github.com/ca2los/flexbox'">GitHub Repository</button>
+                    <p><strong>Description:</strong> Figuring out...</p>
+                </section>
+            </section>
+        </footer>
+
+        <script src="./js/script.js"></script>
+    </body>
+</html>
