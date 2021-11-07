@@ -1,5 +1,5 @@
 # Quiz
-### By Carlos Aguirre Oseguera
+###### By Carlos Aguirre Oseguera
 #### Sessions: July 12 / July 18
 
 ## A Javascript questionnaire
